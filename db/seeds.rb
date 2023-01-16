@@ -5,3 +5,44 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+users = User.create([
+                      { name: 'Иван', surname: 'Иванов', email: 'ivan.ivanov@mail.ru' },
+                      { name: 'Петр', surname: 'Петров', email: 'petr.petrov@mail.ru' },
+                      { name: 'Алексей ', surname: 'Алексеев', email: 'alex.alexeev@mail.ru' },
+                      { name: 'Амаяк', surname: 'Акопян', email: 'amayak.akopyan@mail.ru' }
+                    ])
+
+categories = Category.create([
+                               { title: 'Frontend' },
+                               { title: 'Backend' },
+                               { title: 'Database' }
+                             ])
+
+tests = Test.create([
+                      { title: 'Ruby', level: 2, category: categories[2] },
+                      { title: 'PostgreSQL', level: 1, category: categories[3] },
+                      { title: 'HTML', level: 0, category: categories[1] },
+                      { title: 'JavaScript', level: 1, category: categories[1] },
+                      { title: 'Go', level: 0, category: categories[1] }
+                    ])
+
+questions = Question.create([
+                              {  body: 'Назовите метод, который позволяет добавить метод к одному объекту?',
+                                 test: tests[1] },
+                              {  body: 'Выберите DML конструкции? ', test: tests[2] },
+                              {  body: 'Является ли блок объектом?', test: tests[1] },
+                              {  body: 'Какая типизация в GO?', test: tests[5] },
+                              {  body: 'Назовите семь примитивных типов JS?', test: tests[4] },
+                              {  body: 'Какой тег создает параграф или абзац?', test: tests[3] }
+                            ])
+
+answers = Answer.create([
+                          { body: 'Singletone methods', correct: true, question: questions[1] },
+                          {  body: 'INSERT, SELECT, UPDATE, DELETE', correct: true, question: questions[2] },
+                          {  body: 'Нет', correct: true, question: questions[3] },
+                          {  body: 'Статическая', correct: true, question: questions[4] },
+                          {  body: 'string, number, boolean, symbol, null, undefined и bigin', correct: true,
+                             question: questions[5] },
+                          {  body: '<p>', correct: true, question: questions[6] }
+                        ])
