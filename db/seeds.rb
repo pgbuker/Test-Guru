@@ -20,29 +20,29 @@ categories = Category.create([
                              ])
 
 tests = Test.create([
-                      { title: 'Ruby', level: 2, category: categories[2] },
-                      { title: 'PostgreSQL', level: 1, category: categories[3] },
-                      { title: 'HTML', level: 0, category: categories[1] },
-                      { title: 'JavaScript', level: 1, category: categories[1] },
-                      { title: 'Go', level: 0, category: categories[1] }
+                      { title: 'Ruby', level: 2, category: categories[1] },
+                      { title: 'PostgreSQL', level: 1, category: categories[2] },
+                      { title: 'HTML', level: 0, category: categories[0] },
+                      { title: 'JavaScript', level: 1, category: categories[0] },
+                      { title: 'Go', level: 0, category: categories[0] }
                     ])
 
 questions = Question.create([
                               {  body: 'Назовите метод, который позволяет добавить метод к одному объекту?',
-                                 test: tests[1] },
-                              {  body: 'Выберите DML конструкции? ', test: tests[2] },
-                              {  body: 'Является ли блок объектом?', test: tests[1] },
-                              {  body: 'Какая типизация в GO?', test: tests[5] },
-                              {  body: 'Назовите семь примитивных типов JS?', test: tests[4] },
-                              {  body: 'Какой тег создает параграф или абзац?', test: tests[3] }
+                                 test: tests[0] },
+                              {  body: 'Выберите DML конструкции? ', test: tests[1] },
+                              {  body: 'Является ли блок объектом?', test: tests[0] },
+                              {  body: 'Какая типизация в GO?', test: tests[4] },
+                              {  body: 'Назовите семь примитивных типов JS?', test: tests[3] },
+                              {  body: 'Какой тег создает параграф или абзац?', test: tests[2] }
                             ])
 
 answers = Answer.create([
-                          { body: 'Singletone methods', correct: true, question: questions[1] },
-                          {  body: 'INSERT, SELECT, UPDATE, DELETE', correct: true, question: questions[2] },
-                          {  body: 'Нет', correct: true, question: questions[3] },
-                          {  body: 'Статическая', correct: true, question: questions[4] },
+                          { body: 'Singletone methods', correct: true, question: questions[0] },
+                          {  body: 'INSERT, SELECT, UPDATE, DELETE', correct: true, question: questions[1] },
+                          {  body: 'Нет', correct: true, question: questions[2] },
+                          {  body: 'Статическая', correct: true, question: questions[3] },
                           {  body: 'string, number, boolean, symbol, null, undefined и bigin', correct: true,
-                             question: questions[5] },
-                          {  body: '<p>', correct: true, question: questions[6] }
+                             question: questions[4] },
+                          {  body: '<p>', correct: true, question: questions[5] }
                         ])
