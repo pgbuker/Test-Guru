@@ -46,3 +46,11 @@ answers = Answer.create([
                              question: questions[4] },
                           {  body: '<p>', correct: true, question: questions[5] }
                         ])
+                        
+passed_tests = PassedTest.create([
+                                  {user: users[0], test: tests[0]},
+                                  {user: users[0], test: tests[1]},
+                                  {user: users[1], test: tests[3]},
+                                  {user: users[2], test: tests[3]},
+                                  {user: users[3], test: tests[2]},
+                                  ])
