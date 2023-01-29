@@ -20,11 +20,11 @@ categories = Category.create([
                              ])
 
 tests = Test.create([
-                      { title: 'Ruby', level: 2, category: categories[1] },
-                      { title: 'PostgreSQL', level: 1, category: categories[2] },
-                      { title: 'HTML', level: 0, category: categories[0] },
-                      { title: 'JavaScript', level: 1, category: categories[0] },
-                      { title: 'Go', level: 0, category: categories[0] }
+                      { title: 'Ruby', level: 2, category: categories[1], author: users[0] },
+                      { title: 'PostgreSQL', level: 1, category: categories[2], author: users[0] },
+                      { title: 'HTML', level: 0, category: categories[0], author: users[1] },
+                      { title: 'JavaScript', level: 1, category: categories[0], author: users[1] },
+                      { title: 'Go', level: 0, category: categories[0], author: users[2] }
                     ])
 
 questions = Question.create([
