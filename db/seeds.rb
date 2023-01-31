@@ -24,7 +24,7 @@ tests = Test.create([
                       { title: 'PostgreSQL', level: 1, category: categories[2], author: users[0] },
                       { title: 'HTML', level: 0, category: categories[0], author: users[1] },
                       { title: 'JavaScript', level: 1, category: categories[0], author: users[1] },
-                      { title: 'Go', level: 0, category: categories[0], author: users[2] }
+                      { title: 'Go', level: 6, category: categories[0], author: users[2] }
                     ])
 
 questions = Question.create([
@@ -40,6 +40,7 @@ questions = Question.create([
 answers = Answer.create([
                           { body: 'Singletone methods', correct: true, question: questions[0] },
                           {  body: 'INSERT, SELECT, UPDATE, DELETE', correct: true, question: questions[1] },
+                          {  body: 'CREATE, ALTER, DROP', correct: false, question: questions[1] },
                           {  body: 'Нет', correct: true, question: questions[2] },
                           {  body: 'Статическая', correct: true, question: questions[3] },
                           {  body: 'string, number, boolean, symbol, null, undefined и bigin', correct: true,
