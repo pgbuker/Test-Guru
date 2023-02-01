@@ -14,6 +14,11 @@ class Test < ApplicationRecord
                              }
   scope :sort_by_level, ->(level) { where(level: level) }
 
+  validates :title, presence: true,
+                    uniqueness: { scope: :level, message: 'Может быть только один тест с таким названием и уровнем!' }
+
+  validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
   def self.sort_categories(category)
     joins(:category).where(categories: { title: category }).order('tests.title DESC').pluck(:title)
   end
