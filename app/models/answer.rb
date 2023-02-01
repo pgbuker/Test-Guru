@@ -10,7 +10,7 @@ class Answer < ApplicationRecord
 
   private
 
-  def validate_answers_limit
+  def validate_limit_answers
     errors.add(:answers_quantity, 'Ответов не должно быть больше 4') if question.answers.count >= LIMIT_ANSWERS
   end
 end
