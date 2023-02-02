@@ -5,14 +5,14 @@ class Test < ApplicationRecord
   has_many :passed_tests
   has_many :users, through: :passed_tests
 
-  scope :easy_level, -> { where(level: 0..1) }
-  scope :medium_level, -> { where(level: 2..4) }
-  scope :hard_level, -> { where(level: 5..Float::INFINITY) }
+  scope :view_easy_level, -> { where(level: 0..1) }
+  scope :view_medium_level, -> { where(level: 2..4) }
+  scope :view_hard_level, -> { where(level: 5..Float::INFINITY) }
 
-  scope :view_categories, lambda { |category|
+  scope :by_category, lambda { |category|
                                joins(:category).where(categories: { title: category })
                              }
-  scope :view_level, ->(level) { where(level: level) }
+  scope :by_level, ->(level) { where(level: level) }
 
   validates :title, presence: true,
                     uniqueness: { scope: :level, message: 'Может быть только один тест с таким названием и уровнем!' }
