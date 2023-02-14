@@ -14,8 +14,8 @@ class QuestionsController < ApplicationController
   def new; end
 
   def create
-    @question = @test.questions.create(question_params)
-    if @question.persisted?
+    @question = @test.questions.new(question_params)
+    if @question.save
       render inline: 'Вопрос: <%= @question.inspect %> - создан и записан!'
     else
       render plain: 'Error'
