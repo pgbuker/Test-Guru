@@ -1,0 +1,22 @@
+<p>
+  <strong>Title:</strong>
+  <%= @test.title %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @test.level %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @test.author_id %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @test.category_id %>
+</p>
+
+<%= link_to 'Edit', edit_test_path(@test) %> |
+<%= link_to 'Back', tests_path %>

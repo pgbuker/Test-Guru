@@ -1,0 +1,17 @@
+<h1> Tricky Tests</h1>
+  <p>
+    <%= link_to 'New test', new_test_path %>
+  </p>
+
+  <table>
+  <tr>
+    <th>Title</th>
+    <th>Level</th>
+    <th>Author</th>
+    <th>Category</th>
+    <th cosplan="3" bgcolor="#FBF0DB">Actions</th>
+  </tr>
+
+  <%= render @tests %>
+
+</table>
