@@ -18,5 +18,19 @@
   <%= @test.category_id %>
 </p>
 
+<p>
+  <strong>Кол-во вопросов:</strong>
+  <%= @test.questions.size%>
+</p>
+
+<p>
+  <%= link_to 'Создать вопрос', new_test_question_path(@test) %>
+</p>
+
+<h3>Вопросы теста:</h3>
+<table>
+  <%= render @question %>
+</table>
+
 <%= link_to 'Edit', edit_test_path(@test) %> |
 <%= link_to 'Back', tests_path %>

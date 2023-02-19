@@ -1,0 +1,9 @@
+<h3><%= question_header(@question, @test) %></h3> 
+<%= form_with model: [@test, @question] do |form| %>
+<%= render 'shared/errors', resource: @question %>
+<p>
+  <%= form.label :body %>
+  <%= form.text_field :body, value: @question.body %>
+</p>
+<p><%= form.submit %></p>
+<% end %>
