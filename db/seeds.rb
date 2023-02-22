@@ -48,7 +48,7 @@ answers = Answer.create([
                           {  body: '<p>', correct: true, question: questions[5] }
                         ])
                         
-passed_tests = PassedTest.create([
+test_passages = TestPassage.create([
                                   {user: users[0], test: tests[0]},
                                   {user: users[0], test: tests[1]},
                                   {user: users[1], test: tests[3]},
