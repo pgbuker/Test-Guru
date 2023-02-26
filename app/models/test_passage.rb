@@ -5,13 +5,15 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
 
+  before_update :before_save_set_next_question
+
   def completed?
     current_question.nil?    
   end
 
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
-    self.current_question = next_question
+   
     save!
   end
 
@@ -31,6 +33,10 @@ class TestPassage < ApplicationRecord
 
   def correct_answers
     current_question.answers.correct
+  end
+
+  def before_save_set_next_question
+    self.current_question = next_question
   end
 
   def next_question
