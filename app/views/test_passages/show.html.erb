@@ -1,4 +1,9 @@
 <h1> Pass the  <%= @test_passage.test.title %>  Test</h1>
+<p>
+  <strong>Вопрос № <%= @test_passage.question_number %> из <%= @test_passage.test.questions.size%>  вопросов:</strong>
+  
+</p>
+
 <b>
 <%= @test_passage.current_question.body %>
 </b>
