@@ -10,8 +10,8 @@ class Test < ApplicationRecord
   scope :view_hard_level, -> { where(level: 5..Float::INFINITY) }
 
   scope :by_category, lambda { |category|
-                               joins(:category).where(categories: { title: category })
-                             }
+                        joins(:category).where(categories: { title: category })
+                      }
   scope :by_level, ->(level) { where(level: level) }
 
   validates :title, presence: true,
@@ -22,5 +22,4 @@ class Test < ApplicationRecord
   def self.sort_by_categories(category)
     view_categories(category).order('tests.title DESC').pluck(:title)
   end
-
 end

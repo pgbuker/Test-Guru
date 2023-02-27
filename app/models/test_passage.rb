@@ -1,5 +1,4 @@
 class TestPassage < ApplicationRecord
-
   PASSING_SCORE = 85
 
   belongs_to :user
@@ -11,7 +10,7 @@ class TestPassage < ApplicationRecord
   before_update :before_save_set_next_question
 
   def completed?
-    current_question.nil?    
+    current_question.nil?
   end
 
   def accept!(answer_ids)
@@ -34,10 +33,9 @@ class TestPassage < ApplicationRecord
   private
 
   def before_validation_set_first_question
-    self.current_question = test.questions.first if test.present?   
+    self.current_question = test.questions.first if test.present?
   end
 
-    
   def correct_answer?(answer_ids)
     correct_answers_count = correct_answers.count
 
@@ -56,5 +54,4 @@ class TestPassage < ApplicationRecord
   def next_question
     test.questions.order(:id).where('id > ?', current_question.id).first
   end
-
 end
