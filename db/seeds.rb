@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 users = User.create([
-                      { name: 'Иван', surname: 'Иванов', email: 'ivan.ivanov@mail.ru' },
-                      { name: 'Петр', surname: 'Петров', email: 'petr.petrov@mail.ru' },
-                      { name: 'Алексей ', surname: 'Алексеев', email: 'alex.alexeev@mail.ru' },
-                      { name: 'Амаяк', surname: 'Акопян', email: 'amayak.akopyan@mail.ru' }
+                      { name: 'Иван', surname: 'Иванов', email: 'ivan.ivanov@mail.ru', password: 'qwert' },
+                      { name: 'Петр', surname: 'Петров', email: 'petr.petrov@mail.ru', password: 'qwert' },
+                      { name: 'Алексей ', surname: 'Алексеев', email: 'alex.alexeev@mail.ru', password: 'qwert' },
+                      { name: 'Амаяк', surname: 'Акопян', email: 'amayak.akopyan@mail.ru', password: 'qwert' }
                     ])
 
 categories = Category.create([
@@ -44,7 +44,7 @@ answers = Answer.create([
                           {  body: 'Нет', correct: true, question: questions[2] },
                           {  body: 'Статическая', correct: true, question: questions[3] },
                           {  body: 'string, number, boolean, symbol, null, undefined и bigin', correct: true,
-                             question: questions[4] },
+                             question_id: questions[4] },
                           {  body: '<p>', correct: true, question: questions[5] }
                         ])
                         
