@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_secure_password
 
   validates :name, :surname, :email, presence: true
+  validates :email, format: {with: URI::MailTo::EMAIL_REGEXP}, presence: true, uniqueness: true
  
   def test_passage(test)
     test_passages.order(id: :desc).find_by(test_id: test.id)

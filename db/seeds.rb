@@ -44,7 +44,7 @@ answers = Answer.create([
                           {  body: 'Нет', correct: true, question: questions[2] },
                           {  body: 'Статическая', correct: true, question: questions[3] },
                           {  body: 'string, number, boolean, symbol, null, undefined и bigin', correct: true,
-                             question_id: questions[4] },
+                             question: questions[4] },
                           {  body: '<p>', correct: true, question: questions[5] }
                         ])
                         
