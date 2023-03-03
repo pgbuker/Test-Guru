@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     unless current_user
+      cookies[:path] = request.fullpath
       redirect_to login_path, alert: 'Авторизуйтесь для доступа к TestGuru'
     end
   end
