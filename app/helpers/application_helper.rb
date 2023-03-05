@@ -9,10 +9,7 @@ module ApplicationHelper
 
   def flash_helper
     flash.collect do |key, message|
-    content_tag :p, message, class: "flash #{key}"
+      content_tag :p, message, class: "flash #{key}"
     end.join.html_safe
   end
-  
 end
- 
- 

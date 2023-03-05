@@ -1,8 +1,7 @@
 class SessionsController < ApplicationController
   helper_method :destroy_session
 
-  def new
-  end
+  def new; end
 
   def create
     user = User.find_by(email: params[:email])
@@ -12,12 +11,12 @@ class SessionsController < ApplicationController
       redirect_to cookies[:current_user_path] || tests_path
     else
       flash.now[:alert] = 'Введите почту и пароль!'
-      render :new 
-    end 
+      render :new
+    end
   end
 
   def destroy
     reset_session
-    redirect_to login_path    
+    redirect_to login_path
   end
 end

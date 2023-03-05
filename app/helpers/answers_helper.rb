@@ -1,5 +1,5 @@
 module AnswersHelper
-  def answer_header(question, answer)
+  def answer_header(_question, answer)
     if answer.persisted?
       "Создать новый #{answer.question.body} ответ"
     else
@@ -7,4 +7,3 @@ module AnswersHelper
     end
   end
 end
-
