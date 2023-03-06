@@ -12,11 +12,14 @@
 
   <body>
     <p class="nav user"><%= link_to 'Тест Гуру', root_path %></p>
-    <%  if logged_in? %>
+   
+    <%  if user_signed_in? %>
     <p class="nav user"> Welcome, <b><%= current_user.email %></b> Guru</p> 
-    <p class="nav user">  <b><%= link_to 'Log out', logout_path, method: :delete %></b> from Guru</p> 
+    <p class="nav user">  <b><%= link_to 'Log out', destroy_user_session_path, method: :delete %></b> from Guru</p> 
     <%  end %>  
+
     <%= yield %>
+    <%= render 'shared/flash' %>
     <%= render 'shared/footer' %>
   </body>
 </html>

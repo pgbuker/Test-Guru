@@ -7,10 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 users = User.create([
-                      { name: 'Иван', surname: 'Иванов', email: 'ivan.ivanov@mail.ru', password: 'qwert' },
-                      { name: 'Петр', surname: 'Петров', email: 'petr.petrov@mail.ru', password: 'qwert' },
-                      { name: 'Алексей ', surname: 'Алексеев', email: 'alex.alexeev@mail.ru', password: 'qwert' },
-                      { name: 'Амаяк', surname: 'Акопян', email: 'amayak.akopyan@mail.ru', password: 'qwert' }
+                      { name: 'Joey', surname: 'Tribiani', email: 'joey@example.com', password: '123456' },
+                      { name: 'Иван', surname: 'Иванов', email: 'ivan.ivanov@mail.ru', password: 'qwerty' },
+                      { name: 'Петр', surname: 'Петров', email: 'petr.petrov@mail.ru', password: 'qwerty' },
+                      { name: 'Алексей ', surname: 'Алексеев', email: 'alex.alexeev@mail.ru', password: 'qwerty' },
+                      { name: 'Амаяк', surname: 'Акопян', email: 'amayak.akopyan@mail.ru', password: 'qwerty' }
                     ])
 
 categories = Category.create([
