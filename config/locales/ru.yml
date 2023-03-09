@@ -267,3 +267,46 @@ ru:
       long: "%d %B %Y, %H:%M"
       short: "%d %b, %H:%M"
     pm: вечера
+
+
+  helpers:
+    submit:
+     test:
+       create: 'Создать Тест'
+       update: 'Обновить Тест' 
+    label:
+      test:
+        title: 'Заголовок'
+        level: 'Уровень'
+        category_id: 'Категория'
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  tests:
+    index:
+      header: 'Доступные тесты'
+   
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен"      
+
+  admin:
+    tests:
+      create:
+        success: 'Тест успешно создан'
+      index:
+        header: 'Доступные тесты'
+
+  tests_mailer:
+    completed_test:
+      completed_test:
+        subject: 'Вы только что прошли тест на TestGuru!'
+        greeting: 'Ура!'
+        message:  "Поздравляем! Вы завершили тест: %{test_name}"
+        more: 'Больше тестов тут'
