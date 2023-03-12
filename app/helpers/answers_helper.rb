@@ -1,9 +1,9 @@
 module AnswersHelper
   def answer_header(answer)
     if answer.persisted?
-      "Создать новый #{answer.question.body} ответ"
+      "Редактировать ответ"
     else
-      "Редактировать #{answer.question.body} ответ"
+      "Создать новый ответ"
     end
   end
 end

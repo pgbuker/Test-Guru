@@ -1,16 +1,16 @@
 <h1> <%= t('.header')%></h1>
   <p>
-    <%= link_to 'New test', new_admin_test_path %>
+    <%= link_to t('.new_test'), new_admin_test_path %>
   </p>
 
   <table>
   <tr>
-    <th>Title</th>
-    <th>Level</th>
-    <th>Author</th>
-    <th>Category</th>
-    <th  cosplan="3" bgcolor="#FBF0DB">Actions</th>
-     <th  cosplan="3" bgcolor="#FBF0DB">Кол-во вопросов</th>
+    <th><%= t('.title')%></th>
+    <th><%= t('.level')%></th>
+    <th><%= t('.author')%></th>
+    <th><%= t('.category')%></th>
+    <th  cosplan="3" bgcolor="#FBF0DB"><%= t('.actions')%></th>
+     <th  cosplan="3" bgcolor="#FBF0DB"><%= t('.quest_count')%></th>
   </tr>
 
   <%= render @tests %>

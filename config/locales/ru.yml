@@ -269,16 +269,74 @@ ru:
     pm: вечера
 
 
+  admin:
+    answers: 
+      answer:
+        show: "Просмотреть"
+        edit: "Изменить"
+        delete: "Удалить"
+        del_confirm: "Вы уверены?"
+      edit:
+        header: "Редактировать ответ"
+        back: "Назад"
+      new: 
+        header: "Новый ответ"
+      show:
+        header: "Вопрос"
+        answer: "Ответ:"
+        correct: "Корректность:"
+    questions:
+      show:
+        header: " Вопрос"
+        answers: "Ответы"
+      edit:
+        edit_question: "Редактировать вопрос:"
+    tests:
+      index:
+        header: 'Доступные тесты'
+        new_test: "Создать тест"
+        title: "Название теста"
+        category: "Категория"
+        author: "Автор"
+        level: "Уровень"
+        quest_count: "Количество вопросов"
+        actions: "Действия"
+      create:
+        success: "Тест успешно создан."
+      edit:
+        edit_title: "Редактировать тест"
+      new:
+        new_test: "Создать новый тест"
+      test:
+        del_confirm: "Удалить тест %{title}?"
+      show:
+        new_question: "Создать вопрос"
+        questions: "Вопросы теста"
+        edit_test: "Редактировать тест"
+    nav:
+      header: "Админ Панель ТестГуру"  
+
+
   helpers:
     submit:
-     test:
+      test:
        create: 'Создать Тест'
-       update: 'Обновить Тест' 
+       update: 'Обновить Тест'
+      question:
+        create: "Создать вопрос"
+        update: "Сохранить вопрос"
+      answer:
+        create: "Создать ответ"
+        update: "Сохранить ответ"        
     label:
       test:
         title: 'Заголовок'
         level: 'Уровень'
         category_id: 'Категория'
+    select:
+      prompt: "Выбрать категорию"
+
+
 
   shared:
     errors:
@@ -287,26 +345,34 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+    navbar:
+      header: "Тест Гуру"
+      welcome: "Добро пожаловать, "
+      logout: "Выход"
+      sign_up: "Регистрация"
+      sign_in: "Войти"
+
 
   tests:
+    test:
+      begin: "Начать тест"
     index:
       header: 'Доступные тесты'
+      title: "Название теста"
+      category: "Категория"
+      author: "Автор"
+      level: "Уровень"
+      quest_count: "Количество вопросов"
+      actions: "Действия"
    
   test_passages:
     result:
       header: "Тест %{title} успешно завершен"      
 
-  admin:
-    tests:
-      create:
-        success: 'Тест успешно создан'
-      index:
-        header: 'Доступные тесты'
+
 
   tests_mailer:
     completed_test:
       completed_test:
         subject: 'Вы только что прошли тест на TestGuru!'
-        greeting: 'Ура!'
-        message:  "Поздравляем! Вы завершили тест: %{test_name}"
-        more: 'Больше тестов тут'
+

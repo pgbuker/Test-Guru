@@ -1,12 +1,13 @@
 <h1> <%= t('tests.index.header') %> </h1>
   <table>
   <tr>
-    <th>Title</th>
-    <th>Level</th>
-    <th>Author</th>
-    <th>Category</th>
-    <th  bgcolor="#FBF0DB">Actions</th>
-    <th  bgcolor="#FBF0DB">Кол-во вопросов</th>
+    <th><%= t('.title') %></th>
+    <th><%= t('.level') %></th>
+    <th><%= t('.author') %></th>
+    <th><%= t('.category') %></th>
+   
+    <th  bgcolor="#FBF0DB"><%= t('.quest_count') %></th>
+    <th  bgcolor="#FBF0DB"><%= t('.actions') %></th>
   </tr>
 
   <%= render @tests %>

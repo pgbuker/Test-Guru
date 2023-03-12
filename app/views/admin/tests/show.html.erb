@@ -1,36 +1,36 @@
 <p>
-  <strong>Title:</strong>
+  <strong><%= t('admin.tests.index.title')%>:</strong>
   <%= @test.title %>
 </p>
 
 <p>
-  <strong>Level:</strong>
+  <strong><%= t('admin.tests.index.level')%>:</strong>
   <%= @test.level %>
 </p>
 
 <p>
-  <strong>Author:</strong>
+  <strong><%= t('admin.tests.index.author')%>:</strong>
   <td><%= @test.author.type %>: <%= @test.author.name %> </td>
 </p>
 
 <p>
-  <strong>Category:</strong>
+  <strong><%= t('admin.tests.index.category')%>:</strong>
   <%= @test.category_id %>
 </p>
 
 <p>
-  <strong>Кол-во вопросов:</strong>
+  <strong><%= t('admin.tests.index.quest_count')%>:</strong>
   <%= @test.questions.size%>
 </p>
 
 <p>
-  <%= link_to 'Создать вопрос', new_admin_test_question_path(@test) %>
+  <%= link_to t('.new_question'), new_admin_test_question_path(@test) %>
 </p>
 
-<h3>Вопросы теста:</h3>
+<h3><%= t('.questions')%>:</h3>
 <table>
   <%= render @question %>
 </table>
 
-<%= link_to 'Edit', edit_admin_test_path(@test) %> |
-<%= link_to 'Back', admin_tests_path %>
+<%= link_to t('admin.answers.answer.edit'), edit_admin_test_path(@test) %> |
+<%= link_to t('admin.answers.edit.back'), admin_tests_path %>
