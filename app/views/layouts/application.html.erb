@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TestGuru</title>
+    <title><%= t('shared.navbar.header') %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <p class="nav user"><%= link_to 'Тест Гуру', root_path %></p>
+    <p class="nav user"><%= link_to t('shared.navbar.header'), root_path %></p>
    
     <%  if user_signed_in? %>
     <p class="nav user">  <%= t('shared.navbar.welcome') %> <b><%= current_user.email %></b></p> 

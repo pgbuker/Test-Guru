@@ -369,10 +369,12 @@ ru:
     result:
       header: "Тест %{title} успешно завершен"      
 
-
-
   tests_mailer:
     completed_test:
       completed_test:
         subject: 'Вы только что прошли тест на TestGuru!'
+
+  layouts:
+    admin:
+      panel: "Панель администратора"
 
