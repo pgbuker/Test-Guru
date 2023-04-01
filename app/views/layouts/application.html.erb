@@ -15,7 +15,7 @@
    
     <%  if user_signed_in? %>
     <p class="nav user">  <%= t('shared.navbar.welcome') %> <b><%= current_user.email %></b></p> 
-    <p class="nav user">  <b><%= link_to  t('shared.navbar.logout'), destroy_user_session_path, method: :delete %></b></p> 
+    <p class="nav user">  <b><%= button_to t('shared.navbar.logout'), destroy_user_session_path, method: :delete %></b></p> 
     <%  end %>  
 
     <%= yield %>
