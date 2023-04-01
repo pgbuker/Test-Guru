@@ -1,0 +1,17 @@
+<nav class="navbar navbar-light bg-light">
+ <%= link_to t('shared.navbar.header'), root_path, class: "navbar-brand" %> 
+
+  <span class="navbar-text"> 
+    <%  if user_signed_in? %>
+    <%= t('shared.navbar.welcome') %> <b><%= current_user.email %></b>
+    <b><%= button_to t('shared.navbar.logout'), destroy_user_session_path, method: :delete %></b>
+     <% else %>
+
+
+         <%= link_to t('shared.navbar.sign_up'), new_user_registration_path %> 
+         <%= link_to t('shared.navbar.sign_in'), new_user_session_path %> 
+    <% end %>
+
+  </span>
+
+</nav>
