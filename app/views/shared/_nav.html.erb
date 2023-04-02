@@ -1,9 +1,9 @@
-<nav class="navbar navbar-light bg-dark">
- <%= link_to t('shared.navbar.header'), root_path, class: "navbar-brand text-white" %> 
+<nav class="navbar navbar-light bg-light">
+  <%= link_to t('shared.navbar.header'), root_path, class: "navbar-brand text-dark" %> 
 
   <span class="navbar-text"> 
     <%  if user_signed_in? %>
-    <%= t('shared.navbar.welcome') %> <b><%= current_user.email %></b>
+    <%= t('shared.navbar.welcome') %> <b><%= current_user.name.capitalize %></b>
     <b><%= button_to t('shared.navbar.logout'), destroy_user_session_path, method: :delete %></b>
      <% else %>
 

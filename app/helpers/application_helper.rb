@@ -1,4 +1,7 @@
 module ApplicationHelper
+
+  MESSAGE = { 'notice': 'alert alert-info', 'alert': 'alert alert-warning' }
+
   def current_year
     Date.current.year
   end
@@ -9,7 +12,9 @@ module ApplicationHelper
 
   def flash_helper
     flash.collect do |key, message|
-      content_tag :p, message, class: "flash #{key}"
+      content_tag :p, message, class: "alert #{ MESSAGE[key.to_sym] }"
     end.join.html_safe
   end
 end
+
+

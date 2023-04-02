@@ -364,6 +364,7 @@ ru:
       level: "Уровень"
       quest_count: "Количество вопросов"
       actions: "Действия"
+      for_admin: 'Недостаточно прав для просмотра страницы.'
    
   test_passages:
     result:

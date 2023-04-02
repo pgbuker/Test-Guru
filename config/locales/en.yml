@@ -122,6 +122,7 @@ en:
       level: "Level"
       quest_count: "Questions count"
       actions: "Actions"
+      for_admin: 'You are not authorized to view this page.'
 
   test_passages:
     result:

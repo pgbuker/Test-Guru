@@ -3,7 +3,7 @@
  <td><%= link_to t('admin.answers.answer.show'), admin_question_path(question) %></td> 
   <td><%= link_to  t('admin.answers.answer.edit'), edit_admin_question_path(question) %></td> 
    <td>
-        <%= link_to t('admin.answers.answer.delete'), 
+        <%= button_to t('admin.answers.answer.delete'), 
                     admin_question_path(question),
                     method: :delete,
                     data:   { confirm: t('admin.answers.answer.del_confirm') } %>
