@@ -12,7 +12,7 @@
         <%= link_to t('admin.nav.header'), admin_tests_path, class: "nav-link text-white"  %>
       <% end %>   
 
-    <b><%= button_to t('shared.navbar.logout'), destroy_user_session_path, method: :delete %></b>
+    <b><%= link_to t('shared.navbar.logout'), destroy_user_session_path, method: :delete %></b>
   
 
      <% else %>

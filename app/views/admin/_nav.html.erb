@@ -3,7 +3,7 @@
 
     <div class="nav-admin user">
        <%= t('shared.navbar.welcome') %><b class="nav-admin user-email"><%=  current_user.name.capitalize%></b> 
-      <%=  button_to  t('shared.navbar.logout'), destroy_user_session_path, method: :delete %>
+      <%=  link_to  t('shared.navbar.logout'), destroy_user_session_path, method: :delete %>
     </div>
   </div>
 </nav>
