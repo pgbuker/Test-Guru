@@ -368,7 +368,10 @@ ru:
    
   test_passages:
     result:
-      header: "Тест %{title} успешно завершен"      
+      header: "Тест %{title} успешно завершен"   
+    gist:
+      success: 'Gist успешно сохранен, ссылка: %{url}'
+      failure: 'Во время сохранения gist  произошла ошибка'   
 
   tests_mailer:
     completed_test:

@@ -126,7 +126,10 @@ en:
 
   test_passages:
     result:
-      header: "Test %{title} was successfully completed!"      
+      header: "Test %{title} was successfully completed!"    
+    gist:
+      success: 'Gist was successfully created, link: %{url}'
+      failure: 'An error occurred while saving gist'  
 
   tests_mailer:
     completed_test:
