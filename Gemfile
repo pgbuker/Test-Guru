@@ -39,6 +39,12 @@ gem 'devise', '~> 4.0'
 
 gem 'faraday'
 
+# Gist-client
+gem "octokit", "~> 5.0"
+
+# Shim for load enviroment variables
+gem 'dotenv-rails' 
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
