@@ -301,6 +301,7 @@ ru:
         level: "Уровень"
         quest_count: "Количество вопросов"
         actions: "Действия"
+        gists: "Заметки"
       create:
         success: "Тест успешно создан."
       edit:
@@ -315,7 +316,11 @@ ru:
         edit_test: "Редактировать тест"
     nav:
       header: "Админ Панель ТестГуру"  
-
+    gists:
+      index:
+        question: "Вопрос"
+        url: "Ссылка на Gist"
+        user: "Пользователь"
 
   helpers:
     submit:

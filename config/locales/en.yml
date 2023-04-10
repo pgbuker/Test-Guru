@@ -65,6 +65,7 @@ en:
         level: "Level"
         quest_count: "Questions count"
         actions: "Actions"
+        gists: "Gists"
       create:
         success: 'Test was successfully created'
       edit:
@@ -78,7 +79,12 @@ en:
         questions: "Questions list"
         edit_test: "Edit test"
     nav:
-      header: "TestGuru admin panel"        
+      header: "TestGuru admin panel"
+    gists:
+      index:
+        question: "Question"
+        url: "Gist URL"
+        user: "User"        
 
   helpers:
     submit:
