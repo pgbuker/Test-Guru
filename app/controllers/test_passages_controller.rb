@@ -21,12 +21,9 @@ class TestPassagesController < ApplicationController
     result = GistQuestionService.new(@test_passage.current_question).call
     
   if result.success?
-
-
-
     flash[:notice] = t('.success', url: result.html_url)
   else
-    flash[:alert] = t('.failure')
+    flash[:alert] = t('.failure', url: result.html_url)
   end
 
     redirect_to @test_passage
