@@ -144,4 +144,8 @@ en:
   layouts:
     admin:
       panel: "Admin Panel"
+  gists:
+    create:
+      success: 'Gist was successfully created, link: %{url}'
+      failure: 'An error occurred while saving gist'  
 

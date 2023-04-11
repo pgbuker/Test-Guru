@@ -386,4 +386,8 @@ ru:
   layouts:
     admin:
       panel: "Панель администратора"
+  gists:
+    create:
+      success: 'Gist успешно сохранен, ссылка: %{url}'
+      failure: 'Во время сохранения gist  произошла ошибка '   
 
