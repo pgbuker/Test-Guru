@@ -4,16 +4,16 @@ class GistsController < ApplicationController
   before_action :set_test_passage
 
   def create
-    result = GistQuestionService.new(@test_passage.current_question).call
+    gist_service = GistQuestionService.new(@test_passage.current_question)
+    result = gist_service.call
 
-
-  if result.html_url.present?
+  if gist_service.gist_success?
     current_user.gists.create(question: @test_passage.current_question, url: result.html_url)
     flash[:notice] = t('.success', url: result.html_url)
   else
     flash[:alert] = t('.failure')
   end
-
+    byebug
     redirect_to @test_passage
 
   end

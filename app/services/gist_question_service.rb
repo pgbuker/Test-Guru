@@ -10,6 +10,12 @@ class GistQuestionService
     @client.create_gist(gist_params)
   end
 
+  def gist_success?
+    puts  @client.last_response.status 
+    @client.last_response.status == 201 if @client.last_response
+ 
+  end
+
   private
 
   def gist_params
