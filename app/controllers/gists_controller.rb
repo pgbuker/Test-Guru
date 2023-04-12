@@ -13,7 +13,6 @@ class GistsController < ApplicationController
   else
     flash[:alert] = t('.failure')
   end
-    byebug
     redirect_to @test_passage
 
   end
