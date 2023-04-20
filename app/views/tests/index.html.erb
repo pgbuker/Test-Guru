@@ -3,13 +3,17 @@
 
       <table class="table table-striped">
         <thead>
-        <tr>
-          <th><%= t('.title')%></th>
+         <tr>
+          <th class="sort-by-title pointer"><%= t('.title')%>
+          <%= octicon 'arrow-up', class: 'text-success hide' %>
+          <%= octicon 'arrow-down', class: 'text-success hide' %>
+          </th>
           <th><%= t('.level')%></th>
           <th><%= t('.author')%></th>
-          <th><%= t('.category')%></th>
-          <th  cosplan="3" bgcolor="#FBF0DB"><%= t('.actions')%></th>
-          <th  cosplan="3" bgcolor="#FBF0DB"><%= t('.quest_count')%></th>
+          <th colspan="2" ><%= t('.category')%></th>
+          <th>  <%= t('.quest_count')%></th>
+
+
         </tr>
         </thead>
         <tbody>

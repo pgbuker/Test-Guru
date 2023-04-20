@@ -45,6 +45,9 @@ gem "octokit", "~> 5.0"
 # Shim for load enviroment variables
 gem 'dotenv-rails' 
 
+#UI
+gem 'octicons_helper'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
