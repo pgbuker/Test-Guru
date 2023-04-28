@@ -16,7 +16,5 @@ function checkComparePassword() {
     document.querySelector('.octicon-alert-fill').classList.remove('hide')
     document.querySelector('.octicon-check-circle-fill').classList.add('hide')
   }
-
-
 }
 
