@@ -16,5 +16,10 @@ function checkComparePassword() {
     document.querySelector('.octicon-alert-fill').classList.remove('hide')
     document.querySelector('.octicon-check-circle-fill').classList.add('hide')
   }
+
+  if (document.getElementById('user_password_confirmation').value == '') {
+    document.querySelector('.octicon-check-circle-fill').classList.add('hide')
+    document.querySelector('.octicon-alert-fill').classList.add('hide')
+  }
 }
 
