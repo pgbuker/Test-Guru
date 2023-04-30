@@ -7,7 +7,13 @@ document.addEventListener('turbolinks:load', function () {
 
 function checkComparePassword() {
 
- 
+  if (document.getElementById('user_password_confirmation').value == '') {
+    document.querySelector('.octicon-check-circle-fill').classList.add('hide')
+    document.querySelector('.octicon-alert-fill').classList.add('hide')
+    return true
+  }
+
+
   if (document.getElementById('user_password').value == document.getElementById('user_password_confirmation').value)
   {
     document.querySelector('.octicon-check-circle-fill').classList.remove('hide')
@@ -17,9 +23,6 @@ function checkComparePassword() {
     document.querySelector('.octicon-check-circle-fill').classList.add('hide')
   }
 
-  if (document.getElementById('user_password_confirmation').value == '') {
-    document.querySelector('.octicon-check-circle-fill').classList.add('hide')
-    document.querySelector('.octicon-alert-fill').classList.add('hide')
-  }
+
 }
 
