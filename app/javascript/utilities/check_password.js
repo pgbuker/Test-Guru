@@ -10,7 +10,7 @@ function checkComparePassword() {
   if (document.getElementById('user_password_confirmation').value == '') {
     document.querySelector('.octicon-check-circle-fill').classList.add('hide')
     document.querySelector('.octicon-alert-fill').classList.add('hide')
-    return true
+    return
   }
 
 
