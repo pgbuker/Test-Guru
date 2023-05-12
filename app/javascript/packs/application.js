@@ -10,7 +10,7 @@ import "channels"
 import 'bootstrap/dist/js/bootstrap.bundle'
 import 'utilities/sorting'
 import 'utilities/check_password'
-
+import 'utilities/form_inline'
 
 Rails.start()
 Turbolinks.start()
