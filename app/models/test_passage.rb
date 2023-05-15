@@ -26,6 +26,10 @@ class TestPassage < ApplicationRecord
     (correct_questions * 100 / test.questions.count).to_i
   end
 
+  def progress_percent
+    (question_number.to_f / test.questions.count.to_f * 100).round(1)
+   end
+
   def question_number
     test.questions.index(current_question) + 1
   end
