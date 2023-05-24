@@ -38,6 +38,7 @@ gem 'devise', '~> 4.0'
 #NETWORKING
 
 gem 'faraday'
+gem 'faraday-retry', '~> 2.1'
 
 # Gist-client
 gem "octokit", "~> 5.0"
