@@ -149,3 +149,15 @@ en:
       success: 'Gist was successfully created, link: %{url}'
       failure: 'An error occurred while saving gist'  
 
+  feedbacks:
+    new:
+      header: "Write a message to the site administration"
+    create:
+      success: "Your message has been sent to the administration"
+      failure: "Message not sent. An error occurred while sending"
+    form:
+      email: "Your email"
+      feedback: "Your message"
+      submit: "Submit"
+
+
