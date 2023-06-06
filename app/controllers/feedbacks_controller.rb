@@ -1,14 +1,17 @@
 class FeedbacksController < ApplicationController
+  before_action :authenticate_user!
+
+ 
   def new
     @feedback = Feedback.new
   end
 
   def create
-    @feedback = Feedback.new(feedback_params)
+    @feedback = current_user.feedbacks.new(feedback_params)
 
-    if @feedback.valid?
+    if @feedback.save
       flash[:notice] = t('.success')
-      FeedbackMailer.with(email:  @feedback.email).send_message(@feedback).deliver_now
+      FeedbackMailer.send_message(@feedback).deliver_now
     else
       flash[:alert] = t('.failure')
     end
@@ -18,6 +21,6 @@ class FeedbacksController < ApplicationController
   private
 
   def feedback_params
-    params.require(:feedback).permit(:email, :message)
+    params.require(:feedback).permit(:message)
   end
 end

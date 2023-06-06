@@ -1,9 +1,6 @@
-class Feedback 
-  include ActiveModel::Model
+class Feedback < ApplicationRecord
 
-  attr_accessor :email, :message
+  belongs_to :user
 
-  validates :email, presence: true,
-                    format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :message, presence: true
 end

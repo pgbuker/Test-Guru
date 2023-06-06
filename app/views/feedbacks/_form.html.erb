@@ -2,10 +2,6 @@
   <% render 'shared/errors', resource: @feedback %>
 
   <div class="form-group">
-    <p>
-      <%= form.label :email, t('.email') %>
-      <%= form.email_field :email, autofocus: true, autocomplete: 'email' %>
-    </p>
 
     <p>
       <%= form.label :message, t('.feedback') %><br>
