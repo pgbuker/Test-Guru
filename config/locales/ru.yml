@@ -373,7 +373,9 @@ ru:
    
   test_passages:
     result:
-      header: "Тест %{title} успешно завершен"   
+      header: "Тест %{title} успешно завершен"  
+    update:
+      choose_without_answer: 'НЕ выбран вариант ответа!' 
     gist:
       success: 'Gist успешно сохранен, ссылка: %{url}'
       failure: 'Во время сохранения gist  произошла ошибка '   

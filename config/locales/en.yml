@@ -132,7 +132,9 @@ en:
 
   test_passages:
     result:
-      header: "Test %{title} was successfully completed!"    
+      header: "Test %{title} was successfully completed!"   
+    update:
+      choose_without_answer: "Doesn't have answer's select!" 
     gist:
       success: 'Gist was successfully created, link: %{url}'
       failure: 'An error occurred while saving gist'  
