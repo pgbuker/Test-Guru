@@ -14,6 +14,8 @@ class Test < ApplicationRecord
                       }
   scope :by_level, ->(level) { where(level: level) }
 
+  scope :published_test, -> { where(publish: true) }
+
   validates :title, presence: true,
                     uniqueness: { scope: :level, message: 'Может быть только один тест с таким названием и уровнем!' }
 

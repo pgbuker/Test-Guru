@@ -301,6 +301,7 @@ ru:
         level: "Уровень"
         quest_count: "Количество вопросов"
         actions: "Действия"
+        publish: "Опубликованные"
         gists: "Заметки"
       create:
         success: "Тест успешно создан."

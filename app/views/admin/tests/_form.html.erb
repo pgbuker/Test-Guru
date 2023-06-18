@@ -17,6 +17,12 @@
       <%= form.label :category_id %><br>
       <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true, class: "custom-select" %>
     </p>
+
+    <p>
+      <%= form.label :publish, class: "form-check-label" %>
+      <%= form.check_box :publish, class: "form-check-input" %>
+    </p>
+
     <p><%= form.submit class: "btn btn-primary" %></p>
 
 

@@ -1,0 +1,2 @@
+      invoke  active_record
+      remove    db/migrate/20230618145204_add_publish_to_tests.rb
