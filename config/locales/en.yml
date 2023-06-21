@@ -79,6 +79,8 @@ en:
         new_question: "Create question"
         questions: "Questions list"
         edit_test: "Edit test"
+      form:
+        time_limit: "Time to pass test(minutes)"
     nav:
       header: "TestGuru admin panel"
     gists:

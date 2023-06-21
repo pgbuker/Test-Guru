@@ -23,6 +23,20 @@
       <%= form.check_box :publish, class: "form-check-input" %>
     </p>
 
+    <div class="ms-3">
+      <p class="fw-bolder"><%= t('.time_limit') %></p>
+      <%= form.number_field :time_limit, class: 'form-control' %>
+    </div>
+
+
+
+    <input id='time_limit' type="range" min="0" max="100" step="1" />
+    <p>Value: <output id='value'></output></p>
+
+
+
+
+
     <p><%= form.submit class: "btn btn-primary" %></p>
 
 
