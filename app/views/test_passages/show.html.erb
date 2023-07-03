@@ -4,8 +4,11 @@
   
 </p>
 
+  <div class="timer" id="timer" data-time-left="<%= @test_passage.time_left(@test_passage) %>"></div>
+
+
 <p>
-  <b><%= @test_passage.current_question.body %></b>
+  <b><%= @test_passage.current_question.body %> </b>
 </p>
 
 <div class="progress">

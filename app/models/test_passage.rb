@@ -10,7 +10,7 @@ class TestPassage < ApplicationRecord
   before_update :before_save_set_next_question
 
   def completed?
-    current_question.nil?
+    current_question.nil? || time_out?
   end
 
   def accept!(answer_ids)
@@ -32,6 +32,14 @@ class TestPassage < ApplicationRecord
 
   def question_number
     test.questions.index(current_question) + 1
+  end
+
+  def time_left(test_passage)
+    test_passage.test.time_limit.to_i * 60 - (Time.now - test_passage.created_at).to_i if test_passage.test.time_limit > 0
+  end
+
+  def time_out?
+    (test.timer - (Time.now - created_at)).to_i <= 0
   end
 
   private
