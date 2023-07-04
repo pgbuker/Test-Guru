@@ -17,7 +17,7 @@ const timerEl = document.getElementById('timer')
       } if (timeLeft <= 0) {
         var myTimer = setInterval(updateTimer, 1000)
         clearInterval(myTimer)
-        window.location.href = window.location.href + '/result'
+        document.body.querySelector("form").submit()
       }
     }
   }
