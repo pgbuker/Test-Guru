@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :author_tests, class_name: 'Test', foreign_key: :author_id
   has_many :gists
   has_many :feedbacks
+  has_many :user_badges, dependent: :destroy
+  has_many :badges, through: :user_badges
 
   validates :name, :surname, :email, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }, presence: true, uniqueness: true

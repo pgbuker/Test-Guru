@@ -303,6 +303,7 @@ ru:
         actions: "Действия"
         publish: "Опубликованные"
         gists: "Заметки"
+        badges: "Бейджи"
       create:
         success: "Тест успешно создан."
       edit:

@@ -67,6 +67,7 @@ en:
         actions: "Actions"
         publish: "Published"
         gists: "Gists"
+        badges: "Badges"
       create:
         success: 'Test was successfully created'
       edit:

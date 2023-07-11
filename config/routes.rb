@@ -34,6 +34,7 @@ Rails.application.routes.draw do
 
   resource :gist, only: :create
 
+  resources :badges, only: :index
 
 
 end

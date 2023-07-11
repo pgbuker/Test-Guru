@@ -1,2 +1,0 @@
-class BagesController < ApplicationController
-end

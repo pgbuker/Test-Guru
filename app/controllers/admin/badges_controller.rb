@@ -1,4 +1,4 @@
-class Admin::BagesController < Admin::BaseController
+class Admin::BadgesController < Admin::BaseController
   before_action :set_badge, only: %i[show edit update destroy]
 
   def index
