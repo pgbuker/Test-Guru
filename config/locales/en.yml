@@ -88,20 +88,7 @@ en:
       index:
         question: "Question"
         url: "Gist URL"
-        user: "User"   
-    badges:
-      create:
-        success: "Badge was successfully created"
-      edit:
-        edit_title: "Edit badge"
-      index:
-        header: "Badges"
-        new_badge: "Create new badge"
-        name: "Name"
-        image: "Image"
-        rule: "Rule"
-      show:
-        user: "User"     
+        user: "User"        
 
   helpers:
     submit:
@@ -178,9 +165,5 @@ en:
       email: "Your email"
       feedback: "Your message"
       submit: "Submit"
-  badges:
-    index:
-      header_one: "Your badges"
-      header_two: "All badges"
 
 

@@ -39,11 +39,7 @@ class TestPassage < ApplicationRecord
   end
 
   def time_out?
-    (test.time_limit - (Time.now - created_at)).to_i <= 0
-  end
-
-  def success_finished?
-    completed? && success?
+    (test.timer - (Time.now - created_at)).to_i <= 0
   end
 
   private
