@@ -3,13 +3,18 @@
 
   <div class="form-group">
     <p>
-      <%= form.label :name %>
-      <%= form.select :name, options_for_select(Badge::RULES), prompt: true, class: "custom-select" %>
+      <%= form.label t('admin.badges.index.rule') %>
+      <%= form.select :rule, options_for_select(Badge::RULES), prompt: true, class: "custom-select" %>
     </p>
 
     <p>
-      <%= form.label :image %>
+      <%= form.label t('admin.badges.index.image') %>
       <%= form.text_field :image %>
+    </p>
+
+    <p>
+      <%= form.label t('admin.badges.index.name') %>
+      <%= form.text_field :name %>
     </p>
 
     <p><%= form.submit class: "btn btn-primary" %></p>

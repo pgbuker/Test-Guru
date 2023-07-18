@@ -1,1 +1,35 @@
-<h1>Hello, badges</h1>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4"><h2><%= t('.header_one') %></h2></div>
+
+  <div class="col-12">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th><%= t('admin.badges.index.name') %></th>
+        <th><%= t('admin.badges.index.image') %>
+        <th><%= t('admin.badges.index.rule') %></th>
+      </tr>
+      </thead>
+      <tbody>
+      <%= render partial: 'badge', collection: @user_badges, as: :badge %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col col-md-4"><h2><%= t('.header_two') %></h2></div>
+
+  <div class="col-12">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th><%= t('admin.badges.index.name') %></th>
+        <th><%= t('admin.badges.index.image') %>
+        <th><%= t('admin.badges.index.rule') %></th>
+      </tr>
+      </thead>
+      <tbody>
+      <%= render partial: 'badge', collection: @badges, as: :badge %>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -325,6 +325,19 @@ ru:
         question: "Вопрос"
         url: "Ссылка на Gist"
         user: "Пользователь"
+    badges:
+      create:
+        success: "Бейдж успешно создан"
+      edit:
+        edit_title: "Редактировать бейдж"
+      index:
+        header: "Бейджи"
+        new_badge: "Создать новый бейдж"
+        name: "Название"
+        image: "Картинка"
+        rule: "Правило"
+      show:
+        user: "Пользователь"
 
   helpers:
     submit:
@@ -407,4 +420,9 @@ ru:
       email: "Ваш адрес электронной почты"
       feedback: "Ваше сообщение"
       submit: "Отправить"  
+
+  badges:
+    index:
+      header_one: "Ваши бейджи"
+      header_two: "Все доступные бейджи"
 
