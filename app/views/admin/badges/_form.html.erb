@@ -6,7 +6,7 @@
       <%= form.label t('admin.badges.index.rule') %>
       <%= form.select :rule, options_for_select(Badge::RULES), prompt: true, class: "custom-select" %>
     </p>
-
+    
     <p>
       <%= form.label t('admin.badges.index.image') %>
       <%= form.text_field :image %>

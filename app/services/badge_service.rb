@@ -7,8 +7,8 @@ class BadgeService
   end
 
   def call
-    Badge.all.find_each do |badge|
-      create_badge(badge.rule) if "passed_#{badge.rule}?"
+    Badge.all.each do |badge|
+      create_badge(badge.rule) if send("passed_#{badge.rule}?", badge.name)
     end
   end
 
@@ -20,7 +20,7 @@ class BadgeService
   end
   
 
-  def passed_success_on_first_try?
+  def passed_success_on_first_try?(first_try)
     TestPassage.where(user: @user, test: @test).count == 1 if @test_passage.success?
   end
 
