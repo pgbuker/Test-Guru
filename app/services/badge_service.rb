@@ -18,7 +18,7 @@ class BadgeService
   def passed_success_category?(title)
     category_tests = Test.by_category(title)
     passed_tests = @test_passages.passed.joins(:test).where("tests.category_id": @test.category_id)
-    category_tests.pluck(:id).sort == passed_tests.pluck(:test_id).uniq.sort
+    category_tests.pluck(:id).sort == passed_tests.distinct.pluck(:test_id).sort
   end
   
 
@@ -29,7 +29,7 @@ class BadgeService
   def passed_success_all_level?(level)
     level_tests = Test.by_level(@test.level)
     passed_tests = @test_passages.passed.joins(:test).where("tests.level": @test.level)
-    level_tests.pluck(:id).sort == passed_tests.pluck(:test_id).uniq.sort
+    level_tests.pluck(:id).sort == passed_tests.distinct.pluck(:test_id).sort
   end
 
 
