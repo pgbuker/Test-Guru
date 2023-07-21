@@ -4,6 +4,7 @@ class BadgeService
     @test_passage = test_passage
     @user = test_passage.user
     @test = test_passage.test
+    @test_passages = @user.test_passages
   end
 
   def call
@@ -15,8 +16,9 @@ class BadgeService
   private
 
   def passed_success_category?(title)
-    category = Category.find_by(title: title)
-    success_tests.map(&:test_id).uniq.count == category.tests.count
+    category_tests = Test.by_category(title)
+    passed_tests = @test_passages.passed.joins(:test).where("tests.category_id": @test.category_id)
+    category_tests.pluck(:id).sort == passed_tests.pluck(:test_id).uniq.sort
   end
   
 
@@ -25,12 +27,11 @@ class BadgeService
   end
 
   def passed_success_all_level?(level)
-    Test.where(level: level).map(&:id) == success_tests.map(&:test_id).uniq
+    level_tests = Test.by_level(@test.level)
+    passed_tests = @test_passages.passed.joins(:test).where("tests.level": @test.level)
+    level_tests.pluck(:id).sort == passed_tests.pluck(:test_id).uniq.sort
   end
 
-  def success_tests
-    TestPassage.where(user: @user, test: @test, current_question: nil).select(&:success?)
-  end
 
   def create_badge(rule)
     badge = Badge.find_by(rule: rule)
