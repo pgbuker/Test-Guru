@@ -16,6 +16,8 @@ class Test < ApplicationRecord
 
   scope :published_test, -> { where(publish: true) }
 
+  scope :passed, -> { joins(:test_passages).merge(TestPassage.passed).distinct }
+
   validates :title, presence: true,
                     uniqueness: { scope: :level, message: 'Может быть только один тест с таким названием и уровнем!' }
 
